@@ -13,7 +13,8 @@ __all__ = [
 
 @dataclass
 class Config:
-    PORT: str
+    MONGO_HOST: str
+    MONGO_PORT: str
 
     @property
     def as_dict(self) -> dict:
@@ -24,7 +25,7 @@ class Config:
         return tuple([str(field.name) for field in dataclasses_fields(cls)])
 
 
-class EnvConfigRepository:
+class EnvConfigRepository(Config):
 
     def get(self) -> Config:
         missing_env_vars = self.__check_for_missing_vars()
