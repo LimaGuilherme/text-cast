@@ -133,7 +133,7 @@ dmypy.json
 temp_files/
 cache_folder/
 dev/
-.idea/
+../.idea/
 .github/
 .env.test
 data/
