@@ -1,12 +1,11 @@
-FROM python:3.9
-
-RUN apt-get update
+FROM python:3.8
 
 RUN pip install pipenv
 
 WORKDIR /code
 
+COPY Pipfile Pipfile.lock  /code/
 
-RUN pip3 install -r requirements.txt
+RUN pipenv install --system --deploy
 
 CMD ["flask", "run"]
