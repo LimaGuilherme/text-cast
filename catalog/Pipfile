@@ -11,6 +11,8 @@ python-dotenv = "*"
 [dev-packages]
 pytest = "*"
 coveralls = "*"
+flake8 = "*"
+vulture = "*"
 
 [requires]
 python_version = "3.8"
