@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  transcription-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: transcription-api
+    networks:
+      - transcription-network
+
+
+networks:
+  transcription-network:
+    driver: bridge
