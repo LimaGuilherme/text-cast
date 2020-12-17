@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.k_coverage/
+
+temp_files/
+cache_folder/
+dev/
+.idea/
+.github/
+.env.test
+data/
+.env.deploy
