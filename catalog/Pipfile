@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 flask = "*"
+flask-restful = "==0.3.8"
+python-dotenv = "*"
 
 [dev-packages]
 pytest = "*"
