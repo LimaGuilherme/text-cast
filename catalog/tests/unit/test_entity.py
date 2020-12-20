@@ -20,10 +20,12 @@ class TestEpisodeEntity(TestCase):
         episode = Episode(name='ANDRÉ VIANCO - Flow Podcast #279',
                           podcast='Flow Podcast',
                           image='https://artworks-flow.s3-sa-east-1.amazonaws.com/279_Andre_Vianco.jpg',
-                          description='André Vianco é um escritor brabo que escreveu os livros que mais marcaram a vida do Monark')
+                          description='André Vianco é um escritor brabo que escreveu os livros que mais marcaram a vida do Monark',
+                          audio='https://content.blubrry.com/flowpdc/279_ANDRE_VIANCO.mp3')
 
         self.assertEqual(episode.name, 'ANDRÉ VIANCO - Flow Podcast #279')
         self.assertEqual(episode.podcast, 'Flow Podcast')
         self.assertEqual(episode.image, 'https://artworks-flow.s3-sa-east-1.amazonaws.com/279_Andre_Vianco.jpg')
         self.assertEqual(episode.description, 'André Vianco é um escritor brabo que escreveu os livros que mais marcaram a vida do Monark')
+        self.assertEqual(episode.audio, 'https://content.blubrry.com/flowpdc/279_ANDRE_VIANCO.mp3')
         self.assertIsInstance(episode, Episode)
