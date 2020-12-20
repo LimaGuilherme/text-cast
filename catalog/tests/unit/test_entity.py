@@ -1,5 +1,7 @@
 from unittest import TestCase
 
+from catalog.src.entity import Episode, Podcast
+
 
 class TestPodcastEntity(TestCase):
 
@@ -24,4 +26,4 @@ class TestEpisodeEntity(TestCase):
         self.assertEqual(episode.podcast, 'Flow Podcast')
         self.assertEqual(episode.image, 'https://artworks-flow.s3-sa-east-1.amazonaws.com/279_Andre_Vianco.jpg')
         self.assertEqual(episode.description, 'André Vianco é um escritor brabo que escreveu os livros que mais marcaram a vida do Monark')
-        self.assertIsInstance(episode, Podcast)
+        self.assertIsInstance(episode, Episode)
