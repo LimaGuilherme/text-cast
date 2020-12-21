@@ -15,6 +15,9 @@ __all__ = [
 class Config:
     MONGO_HOST: str
     MONGO_PORT: str
+    MONGO_DB: str
+    MONGO_PODCAST_COLLECTION: str
+    MONGO_EPISODE_COLLECTION: str
 
     @classmethod
     def get_variables_names(cls) -> Tuple[str]:
