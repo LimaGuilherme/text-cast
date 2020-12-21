@@ -4,3 +4,7 @@ class ConfigError(Exception):
 
 class InvalidRssUrl(Exception):
     pass
+
+
+class InvalidRepository(Exception):
+    pass
