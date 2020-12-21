@@ -38,5 +38,3 @@ class RssReader:
             if entry_link['type'] == 'audio/mpeg':
                 return entry_link['href']
         return None
-
-
