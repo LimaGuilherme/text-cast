@@ -41,5 +41,13 @@ checks:
     config:
       threshold: #language-specific defaults. overrides affect all languages.
 plugins:
- bandit:
-  enabled: true
+  bandit:
+    enabled: true
+  pep8:
+    enabled: true
+  radon:
+    enabled: true
+  sonar-python:
+    enabled: true
+  vint:
+    enabled: true
