@@ -1,8 +1,8 @@
-- version: 2
-- checks: Configuration of maintainability checks
+- version: "2"
+- checks:
   argument-count:
     config:
       threshold: 8
-- plugins: Enable optional engines to run in addition to your analysis
+- plugins:
   bandit:
     enabled: true
