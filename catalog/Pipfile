@@ -8,6 +8,7 @@ flask = "*"
 flask-restful = "==0.3.8"
 python-dotenv = "*"
 feedparser = "*"
+pymongo = "*"
 
 [dev-packages]
 pytest = "*"
