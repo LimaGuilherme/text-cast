@@ -6,12 +6,9 @@ from catalog.src.exceptions import InvalidRssUrl
 
 class RssReader:
 
-    def __init__(self, rss):
-        self.rss = rss
-
-    def read(self):
+    def read(self, rss):
         episodes = []
-        feed = feedparser.parse(self.rss)
+        feed = feedparser.parse(rss)
         self.__check_feed_status(feed)
 
         for entry in feed.entries:
