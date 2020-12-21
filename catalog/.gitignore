@@ -138,3 +138,5 @@ dev/
 .env.test
 data/
 .env.deploy
+../.coverage
+../.codeclimate.yml
