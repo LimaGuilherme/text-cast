@@ -139,4 +139,3 @@ dev/
 data/
 .env.deploy
 ../.coverage
-../.codeclimate.yml
