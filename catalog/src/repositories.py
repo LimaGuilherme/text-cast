@@ -88,4 +88,3 @@ def create_repository(configurations, repository):
 
     raise InvalidRepository(f'Cant create repository because this type {repository} '
                             f'is invalid. Valid options: [podcast, episode]')
-
