@@ -19,7 +19,7 @@ class PodcastService:
         return self.__repository.list_all()
 
     def remove_podcast(self, podcast_id: str) -> None:
-        self.__repository.remove(podcast_id)
+        self.__repository.delete(podcast_id)
 
 
 class EpisodeService:
@@ -38,4 +38,4 @@ class EpisodeService:
         return self.__repository.list_all()
 
     def remove_episode(self, episode_id: str) -> None:
-        self.__repository.remove(episode_id)
+        self.__repository.delete(episode_id)
