@@ -4,9 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pymongo = "*"
-
-[dev-packages]
+boto3 = "*"
+flask-restful = "*"
+flask = "*"
 
 [requires]
 python_version = "3.8"
+
+[dev-packages]
