@@ -12,7 +12,7 @@ class PodcastRepository:
     def __init__(self, collection):
         self.__collection = collection
 
-    def _create_podcast_from_mongodb(self, podcast_document):
+    def _create_podcast_from_mongodb(self, podcast_document: dict) -> Podcast:
         return Podcast(
             _id=str(podcast_document['_id']),
             rss=podcast_document['rss'],
