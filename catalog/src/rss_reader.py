@@ -6,20 +6,26 @@ from catalog.src.exceptions import InvalidRssUrl
 
 class RssReader:
 
-    def read(self, rss):
+    def read_episodes(self, rss: str):
         episodes = []
+
         feed = feedparser.parse(rss)
         self.__check_feed_status(feed)
 
         for entry in feed.entries:
             episodes.append(Episode(name=entry.title,
-                                    podcast=entry.author,
+                                    podcast=feed.feed.title,
                                     image=self.__scrap_image_entry(entry),
                                     description=entry.summary,
                                     audio=self.__scrap_audio_entry(entry.links)
                                     )
                             )
         return episodes
+
+    def read_podcast(self, rss: str):
+        feed = feedparser.parse(rss)
+        self.__check_feed_status(feed)
+        return {'name': feed.feed.title, 'image': feed.feed.image['href']}
 
     def __check_feed_status(self, feed):
         if feed.bozo:
