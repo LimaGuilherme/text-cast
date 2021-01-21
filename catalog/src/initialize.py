@@ -11,9 +11,9 @@ api = web_app_module.get_api()
 configurations = config_module.get_config()
 
 rss_reader = RssReader()
-repository = create_repository(configurations, rss_reader)
+mongodb_repository = create_repository(configurations)
 
-podcast_service = PodcastService(repository)
+podcast_service = PodcastService(mongodb_repository, rss_reader)
 
 
 endpoints.register(
