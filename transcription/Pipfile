@@ -8,6 +8,7 @@ boto3 = "*"
 flask-restful = "*"
 flask = "*"
 speechrecognition = "*"
+pusher = "*"
 
 [requires]
 python_version = "3.8"
