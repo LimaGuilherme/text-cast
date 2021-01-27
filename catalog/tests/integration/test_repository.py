@@ -5,7 +5,7 @@ import pymongo
 from catalog.src.configurations import get_config
 from catalog.src.entity import Podcast, Episode
 from catalog.src.exceptions import InvalidRepository
-from catalog.src.repositories import create_repository, PodcastRepository, EpisodeRepository
+from catalog.src.infrascructure.mongodb_repository import create_repository, PodcastRepository, EpisodeRepository
 
 
 class TestCreateRepository(TestCase):
