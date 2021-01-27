@@ -9,4 +9,28 @@
 {
     "name": "THSHOW"
     "rss": "https://desabilitado.com.br/thshow/feed.xml"
+},
+{
+    "name": "RSS News"
+    "rss": "https://www.omnycontent.com/d/playlist/0009b167-0e82-414e-91eb-aae8011fc66d/c84ca328-39e6-4d92-aa21-ac4400f012f9/1f435797-28e6-4c18-bc19-ac4400f048d3/podcast.rss"
+}
+{
+    "name": "Decrépitos"
+    "rss": "https://www.omnycontent.com/d/playlist/0009b167-0e82-414e-91eb-aae8011fc66d/185a840c-578d-4e11-89d5-ac0f00fffe32/f3fcd20d-c59a-4f93-baf5-ac0f00fffe40/podcast.rss"
+},
+{
+    "name": "RapaduraCast"
+    "rss": https://cinemacomrapadura.com.br/rapaduracast/rapaduracast.xml
+},
+{
+    "name": "Guga Cast"
+    "rss": "https://gugacast.libsyn.com/rss"
+},
+{
+    "name": "1986"
+    "rss": https://1986podcast.com.br/podcast/feed.xml
+},
+{
+    "name": "Matando Robos Gigantes"
+    "rss" "https://anchor.fm/s/7f78c9c/podcast/rss"
 }
