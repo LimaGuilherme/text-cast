@@ -9,6 +9,7 @@ flask-restful = "*"
 flask = "*"
 speechrecognition = "*"
 pusher = "*"
+grpcio = "*"
 
 [requires]
 python_version = "3.8"
