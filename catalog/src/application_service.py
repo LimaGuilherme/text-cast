@@ -5,10 +5,11 @@ from catalog.src.entity import Podcast
 
 class PodcastService:
 
-    def __init__(self, repository, rss_reader, cache_repository) -> None:
+    def __init__(self, repository, rss_reader, cache_repository, domain_service) -> None:
         self.__repository = repository
         self.__rss_reader = rss_reader
         self.__cache_repository = cache_repository
+        self.__domain_service = domain_service
 
     def create_podcast(self, podcast_data: dict) -> Podcast:
         podcast_infos = self.__rss_reader.read_podcast(podcast_data['rss'])
@@ -36,3 +37,4 @@ class PodcastService:
 
     def remove_podcast(self, podcast_id: str) -> None:
         self.__repository.delete(podcast_id)
+        self.__domain_service.delete_transcriptions(podcast_id)

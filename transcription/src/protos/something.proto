@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service DeleteEpisodeTranscription {
+    rpc DeleteTranscriptions (DeleteRequest) returns (DeleteReply) {}
+}
+
+message DeleteRequest {
+    string podcast_id = 1;
+    string episode_id = 2;
+}
+
+message DeleteReply {
+    string response = 1;
+}
