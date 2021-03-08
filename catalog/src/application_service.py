@@ -19,6 +19,10 @@ class PodcastService:
             image=podcast_infos['image'])
         return self.__repository.add(podcast)
 
+    def list_episode(self, episode_id: str):
+        self.
+
+
     def list_episodes(self, podcast_id: str) -> Podcast:
         episodes = self.__cache_repository.get(podcast_id)
         podcast = self.__repository.list(podcast_id)
@@ -38,3 +42,20 @@ class PodcastService:
     def remove_podcast(self, podcast_id: str) -> None:
         self.__repository.delete(podcast_id)
         self.__domain_service.delete_transcriptions(podcast_id)
+
+class UploadFileService:
+
+    def __init__(self, aws_s3):
+        self._aws_s3 = aws_s3
+
+
+
+
+class TranscribeService:
+
+    def __init__(self, aws_transcribe):
+        self._aws_transcribe = aws_transcribe
+
+
+    def transcribe(self):
+        self._aws_transcribe.transcribe_file()

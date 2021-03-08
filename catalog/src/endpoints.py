@@ -43,7 +43,19 @@ class PodcastEpisodeResource(Resource):
         return serialize_podcast_to_json(podcast_episodes), 200
 
 
-def register(podcast_service) -> None:
+class TranscribeResource(Resource):
+
+    def __init__(self, podcast_service):
+        self.podcast_service = podcast_service
+
+    def get(self, episode_id: str):
+        episode = self.podcast_service.list_episode(episode_id)
+        # salvar no s3
+        # file_uri =
+        self.transribe_service.transribe(file_uri)
+
+
+def register(podcast_service, transcribe_service) -> None:
     api.add_resource(PodcastResource,
                      '/api/podcasts',
                      '/api/podcasts/<string:podcast_id>',
@@ -55,4 +67,10 @@ def register(podcast_service) -> None:
                      '/api/podcasts/<string:podcast_id>/episodes',
                      resource_class_kwargs={
                          'podcast_service': podcast_service
+                     })
+
+    api.add_resource(TranscribeResource,
+                     '/api/episodes/<string:episode_id>/transcribe',
+                     resource_class_kwargs={
+                         transcribe_service
                      })
